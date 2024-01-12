@@ -1,0 +1,24 @@
+.why_tones{
+    text-align: center;
+    width: 65%;
+    margin: 2rem auto;
+}
+
+.why_tones h3{
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 4.4rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+}
+
+.why_tones p{
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.2rem;
+}

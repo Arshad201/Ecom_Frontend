@@ -1,0 +1,68 @@
+.HomeCTA{
+    width: 100%;
+    margin: 15rem 0rem;
+}
+
+.HomeCTA .wrapper{
+    width: 80%;
+    margin: 0rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.HomeCTA .textBox{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.HomeCTA h2{
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 4.4rem;
+    letter-spacing: 0.2rem;
+}
+
+.HomeCTA p{
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.2rem;
+}
+
+.HomeCTA button{
+    color: var(--black);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.2rem;
+    white-space: nowrap;
+    background-color: var(--white);
+    border: none;
+    padding: 1.5rem 3rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20rem;
+    margin-right: 9rem;
+}
+
+
+.HomeCTA .imgBox{
+    flex: 1;
+    text-align: right;
+}
+
+.HomeCTA .imgBox img{
+    width: 75%;
+}

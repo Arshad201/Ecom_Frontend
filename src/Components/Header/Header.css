@@ -1,0 +1,60 @@
+header{
+    margin-bottom: 3rem;
+}
+
+
+/* Navbar  */
+nav{
+    width: 90%;
+    margin: 0rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.nav-links .link{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: var(--white);
+    position: relative;
+}
+
+.link::after{
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: -30%;
+    width: 0%;
+    background-color: var(--white);
+    height: 2px;
+    transition: .5s ease-in-out;
+}
+
+.link:hover::after{
+    width: 100%;
+    transition: .5s ease-in-out;
+}
+
+.nav-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.nav-icons .navIcon{
+    color: var(--white);
+    font-size: 2.5rem;
+}

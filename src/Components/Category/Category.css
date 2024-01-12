@@ -1,0 +1,105 @@
+.category .wrapper{
+    width: 77%;
+    margin: 0rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 0rem;
+}
+
+.category h2{
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.2rem;
+    white-space: nowrap;
+}
+
+.btn{
+    color: var(--black);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.2rem;
+    white-space: nowrap;
+    background-color: var(--white);
+    border: none;
+    padding: 1.5rem 3rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20rem;
+    margin-right: 9rem;
+}
+
+.category-circle-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+    margin-top: 4.5rem;
+}
+
+.catgory-circle-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.category-circle{
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50rem;
+    overflow: hidden;
+}
+
+.category-circle img{
+    width: 100%;
+    border-radius: 50rem;
+    position: relative;
+    z-index: -1;
+}
+
+.category-circle:hover img{
+    transform: scale(103%);
+}
+
+.category-circle::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    border-radius: 50rem;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+}
+
+.category-circle:hover::after{
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .2s ease-in-out;
+}
+
+.category-text{
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.2rem;
+}
+
+.category .moving-container{
+    background-color: var(--white);
+    margin-top: 2rem;
+}
+
+.category .moving{
+    color: var(--black);
+}
