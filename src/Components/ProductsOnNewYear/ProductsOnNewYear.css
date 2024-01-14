@@ -21,5 +21,6 @@
     margin: 0rem auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
+    column-gap: 4rem;
+    row-gap: 15rem;
 }

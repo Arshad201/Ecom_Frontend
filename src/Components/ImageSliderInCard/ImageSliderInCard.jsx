@@ -1,9 +1,25 @@
-import { useState } from "react"
+import React, { useEffect, useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
+
+// import required modules
+import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
+
 import image1 from "../../assets/images/maroon_shirt_1.jpg"
 import image2 from "../../assets/images/maroon_shirt_2.jpg"
 import image3 from "../../assets/images/maroon_shirt_3.jpg"
 import image4 from "../../assets/images/maroon_shirt_4.jpg"
 import image5 from "../../assets/images/maroon_shirt_5.jpg"
+
+import ProgressBar from '../ProgressBar/ProgressBar.jsx'
 
 const ImageSliderInCard = () => {
 
@@ -14,35 +30,58 @@ const ImageSliderInCard = () => {
     image4,
     image5,
   ]
+  const [duration, setDuration] = useState({animationDuration: '400ms'});
 
-  const [image, setImage] = useState(images[0]);
-  const [count, setCount] = useState(1);
+  const [progress, setProrgess] = useState(false);
+  const swiperRef = useRef()
 
-  const slideShowImage = () =>{
+  const whenMouseEnter = () =>{
 
-    setCount(prev=>prev+1);
+    swiperRef.current.autoplay.start();
 
-    setTimeout(() => {
-
-      if(image === images.length-1){
-        setCount(1)
-        setImage(image1)
-      }else{
-        setImage(images[images.length-(images.length-count)])
-      }
-      
-    }, 1000);
+    setDuration({
+      animationDuration: `${images.length*760}ms`
+    })
+    
+    setProrgess(true);
 
   }
 
-  const MouseLeave = () =>{
-    setImage(image1)
+  const whenMouseLeave = () =>{
+
+    // swiperRef.current.slideTo(1)
+    swiperRef.current.autoplay.stop();
+    setProrgess(false);
+    
   }
+
+  useEffect(()=>{
+    swiperRef.current.autoplay.stop();
+  },[])
+
 
   return (
-    <div>
-      <img src={image} alt="" onMouseEnter={slideShowImage} onMouseLeave={MouseLeave}/>
-    </div>
+    <>
+      <Swiper
+        onSwiper={(swiper)=>{swiperRef.current=swiper}}
+        autoplay={{delay: 500}}
+        spaceBetween={30}
+        effect={'fade'}
+        loop={true}
+        modules={[EffectFade, Autoplay]}
+        className="mySwiper"
+      >
+        {images?.map((image, i)=><SwiperSlide key={i} 
+        onMouseEnter={whenMouseEnter}
+        onMouseLeave={whenMouseLeave}>
+          <img src={image} />
+        </SwiperSlide>)}
+
+      </Swiper>
+      <div className="progressBarContainer">
+        <div className={`bar ${progress && 'activeBar'}`} style={duration}></div>
+      </div>
+    </>
   )
 }
 

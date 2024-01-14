@@ -2,7 +2,7 @@ import "./ProductCard.css";
 
 import ImageSliderInCard from '../ImageSliderInCard/ImageSliderInCard.jsx';
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product, index}) => {
 
   return (
     <div className="productCard">
@@ -10,10 +10,10 @@ const ProductCard = ({product}) => {
         <ImageSliderInCard/>
       </div>
       <div className="wrapper">
-        <div className="moving-container">
+        {index <3 && <div className="moving-container">
           <div className="moving">SELLING FAST </div>
           <div className="moving">SELLING FAST </div>
-        </div>
+        </div>}
         <h6 className="title">{product.title}</h6>
         <div className="price-box">
           <span>{product.price}</span>

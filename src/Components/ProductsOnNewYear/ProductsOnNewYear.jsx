@@ -26,13 +26,88 @@ const ProductsOnNewYear = () => {
             images: [
                 "../../assets/images/maroon_shirt_1.jpg"
             ]
-        }
+        },
+        {
+            title: 'Festive patterns - Maroon ',
+            price: 'Rs. 1,499.00',
+            salePrice: 'Rs. 999.00',
+            images: [
+                "../../assets/images/maroon_shirt_1.jpg"
+            ]
+        },
+        {
+            title: 'Festive patterns - Maroon ',
+            price: 'Rs. 1,499.00',
+            salePrice: 'Rs. 999.00',
+            images: [
+                "../../assets/images/maroon_shirt_1.jpg"
+            ]
+        },
+        {
+            title: 'Festive patterns - Maroon ',
+            price: 'Rs. 1,499.00',
+            salePrice: 'Rs. 999.00',
+            images: [
+                "../../assets/images/maroon_shirt_1.jpg"
+            ]
+        },
+        {
+            title: 'Festive patterns - Maroon ',
+            price: 'Rs. 1,499.00',
+            salePrice: 'Rs. 999.00',
+            images: [
+                "../../assets/images/maroon_shirt_1.jpg"
+            ]
+        },
+        {
+            title: 'Festive patterns - Maroon ',
+            price: 'Rs. 1,499.00',
+            salePrice: 'Rs. 999.00',
+            images: [
+                "../../assets/images/maroon_shirt_1.jpg"
+            ]
+        },
+        {
+            title: 'Festive patterns - Maroon ',
+            price: 'Rs. 1,499.00',
+            salePrice: 'Rs. 999.00',
+            images: [
+                "../../assets/images/maroon_shirt_1.jpg"
+            ]
+        },
+        {
+            title: 'Festive patterns - Maroon ',
+            price: 'Rs. 1,499.00',
+            salePrice: 'Rs. 999.00',
+            images: [
+                "../../assets/images/maroon_shirt_1.jpg"
+            ]
+        },
+        {
+            title: 'Festive patterns - Maroon ',
+            price: 'Rs. 1,499.00',
+            salePrice: 'Rs. 999.00',
+            images: [
+                "../../assets/images/maroon_shirt_1.jpg"
+            ]
+        },
+        {
+            title: 'Festive patterns - Maroon ',
+            price: 'Rs. 1,499.00',
+            salePrice: 'Rs. 999.00',
+            images: [
+                "../../assets/images/maroon_shirt_1.jpg"
+            ]
+        },
+        
+        
+
     ]
   return (
     <div className="products_newyear">
         <h2>New Year! New Wear!!!</h2>
         <div className="grid">
-            {products?.map((product, i)=><ProductCard key={i} product={product} />)}
+            {products?.map((product, i)=><ProductCard key={i} product={product} index={i} />)}
         </div>
     </div>
   )

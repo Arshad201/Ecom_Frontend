@@ -5,6 +5,8 @@ import ProductsOnNewYear from '../../Components/ProductsOnNewYear/ProductsOnNewY
 import HomeCTA from '../../Components/HomeCTA/HomeCTA.jsx'
 import WhyTones from '../../Components/WhyTones/WhyTones.jsx'
 import ImageCompareSlider from '../../Components/ImageCompareSlider/ImageCompareSlider.jsx'
+import SingleProductSection from '../../Components/SingleProductSection/SingleProductSection.jsx'
+
 
 const Home = () => {
   return (
@@ -14,6 +16,7 @@ const Home = () => {
     </div>
     <Category/>
     <ProductsOnNewYear/>
+    <SingleProductSection/>
     <ImageCompareSlider/>
     <HomeCTA/>
     <WhyTones/>

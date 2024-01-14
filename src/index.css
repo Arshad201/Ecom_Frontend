@@ -53,6 +53,54 @@ font-family: 'Roboto', sans-serif;
     animation: movinText 6000ms linear infinite;
 }
 
+
+/* Swiper */
+
+.mySwiper{
+  width: 375px;
+  /* position: relative; */
+}
+.swiper {
+  /* width: 100%; */
+}
+
+.swiper-slide {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.progressBarContainer{
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+.progressBarContainer .bar{
+  width: 0%;
+  height: 2px;
+  background-color: var(--white);
+}
+
+.progressBarContainer .activeBar{
+  width: 100%;
+  animation: progressBar 40ms linear infinite;
+}
+
+@keyframes progressBar {
+  0%{
+      width: 0%;
+  }
+  100%{
+      width: 100%;
+  }
+}
+
+/* Swiper */
 @keyframes movinText {
     0%{
         transform: translateX(0);

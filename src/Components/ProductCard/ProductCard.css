@@ -1,11 +1,12 @@
 
 .productCard .img_wrapper{
     width: 100%;
+    position: relative;
 }
 
-.productCard .img_wrapper img{
+/* .productCard .img_wrapper img{
     width: 100%;
-}
+} */
 
 
 .productCard .wrapper{
